@@ -1,5 +1,6 @@
 # Spice-Vim
 
+ Unlock your productivity for Vim 🚀
 
 ## Requirements
 
