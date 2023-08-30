@@ -395,7 +395,7 @@ call plug#end()
 
 " previously unused lighthaus theme, currently unused
 " colorscheme lighthaus
-colorscheme nord
+silent colorscheme nord
 
 " execute python code (from visual selection)
 vnoremap <f5> :!python<CR>
