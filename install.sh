@@ -21,7 +21,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # create ~/.vimrc with the content of the vimrc file in this directory
 if [[ -f $HOME/.vimrc ]]; then
 	echo "~/.vimrc found, appending configuration to this file"
-	echo $(dirname "$0")/vimrc >> ~/.vimrc
+	cat $(dirname "$0")/vimrc >> ~/.vimrc
 else
 	echo "Installing ~/.vimrc"
 	cp $(dirname "$0")/vimrc ~/.vimrc
