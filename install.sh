@@ -30,6 +30,10 @@ else
 	cp $(dirname "$0")/vimrc $HOME/.vimrc
 fi
 
+# install spell files before first execution
+mkdir -p $HOME/.vim/spell
+wget "http://ftp.vim.org/pub/vim/runtime/spell/de.utf-8.spl" -q -O $HOME/.vim/spell/de.utf-8.spl
+wget "http://ftp.vim.org/pub/vim/runtime/spell/de.utf-8.sug" -q -O $HOME/.vim/spell/de.utf-8.sug
 
 # start vim, install the plugins and quit it again
 vim +PlugInstall +qall
