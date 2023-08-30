@@ -85,6 +85,10 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " (neomake, ...)
 set shell=/bin/bash
 
+" set python3 as default
+" nuke python2, nobody needs python2 any more
+set pyxversion=3
+
 " better backup, swap and undos storage for vim
 set directory=~/.vim/dirs/tmp     " directory to place swap files in
 set backup                        " make backup files
