@@ -33,3 +33,6 @@ fi
 
 # start vim, install the plugins and quit it again
 vim +PlugInstall +qall
+
+# deoplete requires pynvim to be installed
+pip3 install --user pynvim
