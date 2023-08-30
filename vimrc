@@ -1,24 +1,49 @@
+" Spice-Vim 🌶️
+
+" Boost your productivity with this Vim quick starter
+
+
+" disable automatic visual selection when highlighting text with the mouse
+" cursor. Start with a clean Vim environment
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-set mouse-=a	" disable mouse support
-set nu rnu	" numbers, relative-numbers » with both being set, numbers are shown absolutely on the line where the cursor is and relatively from that line on
-set cursorline 	" highlight the line in which the cursor currently is
-" set cursorcolumn " highlight the column where the cursor is
-set autoindent
-set ar		" autoreload
-set sta		" smarttab
-filetype plugin on	" enable file type based detection and execution of specified startup scripts
+" disable vi compatibility "
+set nocompatible
 
-set encoding=utf-8	" utf-8 as default encoding
+set mouse-=a	" disable all mouse-based features
 
-set nocompatible	" disable vi compatibility "
-set timeout		" required by vim-which-key
+" activate numbers and relative numbers
+" with both being set: numbers are shown absolutely on the line where the
+" cursor is and relatively from that line on
+set nu rnu
+
+" highlight the line where the cursor is
+set cursorline
+
+" enable file type based detection and execution of specified startup scripts
+filetype plugin on
+
+" enable automatic indentation
+filetype indent on
+filetype plugin indent on
+" set autoindent	" optionally this also works
+
+" activate autoreload
+set ar
+
+" activate smarttab
+set sta
+
+" set utf-8 as default encoding
+set encoding=utf-8
+
+" required by vim-which-key
+set timeout
 
 " enable code folding
 set foldmethod=indent
 set foldlevel=99
-"nnoremap <space> za " deactivated because it was not really helpful
 
 " Use space as leader key
 " Leader key is a namespace for custom defined keybindings
@@ -42,6 +67,7 @@ command Reload so ~/.vimrc
 
 " open help (:h) in new tab
 cabbrev help tab help
+cabbrev h tab help
 
 " some spelling options
 set spell
@@ -142,18 +168,14 @@ set laststatus=2
 " this layout
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-"let g:airline_left_sep = "\ue0b0"
-"let g:airline_left_alt_sep = "\ue0b1"
-"let g:airline_right_sep = "\ue0b6"
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#branch#enabled=1
-"let g:airline#extensions#ale#enabled = 1
+"let g:airline#extensions#ale#enabled = 1	" apparently this works without
+"being activated manually
 let g:airline#extensions#tabline#show_buffers = 0
 " official repository for airline themes
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='lighthaus'
-" previously used NORD theme, currently unused
-"let g:airline_theme = "nord"
 
 " Create python docstring templates by calling :Docstring or :DocstringTypes
 " Docstring style is current set to numpy (see documentation)
@@ -192,7 +214,7 @@ Plug 'bfrg/vim-cpp-modern'
 " Syntax Highlighting for OpenSCAD
 Plug 'sirtaj/vim-openscad'
 
-" Language Support für Rust
+" Language Support for Rust
 Plug 'rust-lang/rust.vim'
 
 " a huge collection of language packs
@@ -212,8 +234,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " call <Leadaer>t to open the tasklist
 Plug 'fisadev/FixedTaskList.vim'
 
-" Deoplete and dependencies
-" Asynchronous autocompletion
+" Deoplete (asynchronous autocompletion) and dependencies
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
@@ -247,7 +268,7 @@ let g:ale_fixers = {
 	\	'python': ['autopep8'],
 	\ 'javascript': ['eslint'],
 \}
-"TODO: Create flake8 config file
+"TODO: Create flake8 config file and store it in a useful location
 "call ale#Set('python_flake8_options', '--config=$HOME/.config/flake8')
 autocmd BufEnter call ale#Set('python_pylint_options', '--errors-only --disable=C,R')
 nmap <Leader>gd :ALEGoToDefinition<CR>
@@ -255,7 +276,6 @@ nmap <Leader>gr :ALEFindReferences<CR>
 nmap <Leader>K :ALEHover<CR>
 let g:ale_set_balloons=1
 nmap <F10> :ALEFix<CR>
-
 
 
 " Completion for languages within other opened files
@@ -267,6 +287,7 @@ Plug 'davidhalter/jedi-vim'
 " Disable autocompletion (using deoplete instead)
 let g:jedi#completions_enabled = 0
 "commented out because I wanted to remap the key bindings to the Leader key
+"(TODO)
 "  All these mappings work only for python code:
 " " Go to definition
 " let g:jedi#goto_command = ',d'
@@ -374,6 +395,6 @@ call plug#end()
 " colorscheme lighthaus
 colorscheme nord
 
-" execute python code
+" execute python code (from visual selection)
 vnoremap <f5> :!python<CR>
 noremap <F5> <ESC>:w<CR>:silent execute "!python %"<CR><CR>
