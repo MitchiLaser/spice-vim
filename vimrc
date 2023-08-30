@@ -244,6 +244,8 @@ let g:deoplete#enable_at_startup = 1
 " complete with words from any opened file
 let g:context_filetype#same_filetypes = {}
 let g:context_filetype#same_filetypes._ = '_'
+" specify the right python interpreter
+let g:python3_host_prog = 'python3'
 " Asynchronous linting engine
 Plug 'dense-analysis/ale'
 " use ale for autocompletion with deoplete in combination
