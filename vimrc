@@ -274,9 +274,11 @@ let g:ale_fixers = {
 	\	'python': ['autopep8'],
 	\ 'javascript': ['eslint'],
 \}
-"TODO: Create flake8 config file and store it in a useful location
-"call ale#Set('python_flake8_options', '--config=$HOME/.config/flake8')
-autocmd BufEnter call ale#Set('python_pylint_options', '--errors-only --disable=C,R')
+" options for python linters and fixers
+let g:ale_python_pylint_options = "--errors-only --disable=C,R --max-line-length=150"
+let g:ale_python_flake8_options = "--ignore=E501"
+let g:ale_python_autopep8_options = "--max-line-length 150"
+"TODO: replace the following line with proper C++ handling
 autocmd BufEnter call ale#Set('c_clangformat_options', 'GNU')
 nmap <Leader>gd :ALEGoToDefinition<CR>
 nmap <Leader>gr :ALEFindReferences<CR>
