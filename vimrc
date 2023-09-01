@@ -277,6 +277,7 @@ let g:ale_fixers = {
 "TODO: Create flake8 config file and store it in a useful location
 "call ale#Set('python_flake8_options', '--config=$HOME/.config/flake8')
 autocmd BufEnter call ale#Set('python_pylint_options', '--errors-only --disable=C,R')
+autocmd BufEnter call ale#Set('c_clangformat_options', 'GNU')
 nmap <Leader>gd :ALEGoToDefinition<CR>
 nmap <Leader>gr :ALEFindReferences<CR>
 nmap <Leader>K :ALEHover<CR>
