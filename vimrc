@@ -48,6 +48,7 @@ set foldlevel=99
 " Use space as leader key
 " Leader key is a namespace for custom defined keybindings
 let mapleader="\<Space>"
+let localleader="\\"
 
 " Remap :W to :w
 " this avoids 'Not an editor command' error when shift is accidentally pressed
