@@ -17,6 +17,8 @@ in your favourite terminal. The script requires `vim` and `git` being installed.
 - Ubuntu: `sudo apt install fonts-powerline` 📦
 - Fedora: `sudo dnf install powerline-fonts` 📦
 
+After running the install script the program `texlab` has to be installed via the builtin package manager. This provides LaTeX LSP support.
+
 Open Vim and explore the new world of possibilities that spice-vim 🌶️ has unlocked. Don't hesitate to tweak the plugins and settings to match your preferences. 🧩
 
 Familiarize yourself with the pre-defined keybindings provided by spice-vim 🌶️. These carefully chosen shortcuts will enhance your productivity without disrupting your established Vim workflow. ⌨️

@@ -265,7 +265,8 @@ let g:ale_linters = {
 	\'rust': ['rust-analyzer', 'cargo'],
 	\'java': ['checkstyle'],
 	\ 'javascript': ['eslint'],
-	\'cpp': ['clangd', 'clangtidy']
+	\'cpp': ['clangd', 'clangtidy'],
+	\'tex': ['texlab']
 \}
 let g:ale_c_parse_compile_commands = 1
 let g:ale_fixers = {
