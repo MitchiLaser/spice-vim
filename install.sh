@@ -39,4 +39,5 @@ wget "http://ftp.vim.org/pub/vim/runtime/spell/de.utf-8.sug" -q -O $HOME/.vim/sp
 vim +PlugInstall +qall
 
 # deoplete requires pynvim to be installed
-pip3 install --user pynvim
+# and hdl-ckecker is a dependency for the vim hdl-checker plugin
+pip3 install --user pynvim hdl-checker --upgrade

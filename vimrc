@@ -267,7 +267,8 @@ let g:ale_linters = {
 	\'java': ['checkstyle'],
 	\ 'javascript': ['eslint'],
 	\'cpp': ['clangd', 'clangtidy'],
-	\'tex': ['texlab']
+	\'tex': ['texlab'],
+	\'vhdl': ['hdl-checker']
 \}
 let g:ale_c_parse_compile_commands = 1
 let g:ale_fixers = {
