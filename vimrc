@@ -313,6 +313,15 @@ let g:jedi#completions_enabled = 0
 " Python autocompletion for deoplete
 Plug 'deoplete-plugins/deoplete-jedi'
 
+" TODO: currently deoplete-ternjs is not working correctly!
+" JavaScript Autocomplete
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install tern' }
+" Use tern_for_vim tern server
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
 " All about surroundings except surround sound
 Plug 'tpope/vim-surround'
 " you can use `ds"` to delete surrounding Parenthese,
