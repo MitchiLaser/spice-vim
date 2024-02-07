@@ -246,6 +246,9 @@ Plug 'roxma/vim-hug-neovim-rpc'
 let g:deoplete#enable_at_startup = 1
 " line below commented out because it throws an error
 "call deoplete#custom#option({'ignore_case': v:true,'smart_case': v:true,})
+" start deoplete in multithreaded mode (tried this as a fox for
+" deoplete-ternjs error messages popping up)
+"autocmd BufEnter call deoplete#custom#option('num_processes', 4)
 " complete with words from any opened file
 let g:context_filetype#same_filetypes = {}
 let g:context_filetype#same_filetypes._ = '_'
