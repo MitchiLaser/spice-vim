@@ -137,6 +137,9 @@ nmap <Leader>l :Limelight!!<CR>
 " nord-vim colour scheme
 Plug 'arcticicestudio/nord-vim'
 
+" monokai color theme
+Plug 'crusoexia/vim-monokai'
+
 " lighthouse theme for vim
 Plug 'lighthaus-theme/vim-lighthaus'
 
@@ -417,6 +420,7 @@ call plug#end()
 
 " previously unused lighthaus theme, currently unused
 " colorscheme lighthaus
+"silent! colorscheme monokai
 silent! colorscheme nord
 
 " execute python code (from visual selection)
