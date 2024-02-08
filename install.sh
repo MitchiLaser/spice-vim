@@ -41,3 +41,6 @@ vim +PlugInstall +qall
 # deoplete requires pynvim to be installed
 # and hdl-ckecker is a dependency for the vim hdl-checker plugin
 pip3 install --user pynvim hdl-checker --upgrade
+
+# tern requres an installation
+npm install tern
