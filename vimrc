@@ -318,6 +318,7 @@ let g:jedi#completions_enabled = 0
 
 " Python autocompletion for deoplete
 Plug 'deoplete-plugins/deoplete-jedi'
+let g:deoplete#sources#jedi#show_docstring = 1
 
 " TODO: currently deoplete-ternjs is not working correctly!
 " JavaScript Autocomplete
