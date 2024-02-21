@@ -411,6 +411,9 @@ let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'tclpro', 'vs
 " default debug configuration for python
 Plug 'sagi-z/vimspectorpy', { 'do': { -> vimspectorpy#update() } }
 
+" GitHub Copilot
+Plug 'github/copilot.vim'
+
 " These plugins can be useful but they are neither installed nor configured
 " currently
 "Plug 'preservim/vim-pencil'
