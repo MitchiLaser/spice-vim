@@ -413,13 +413,24 @@ Plug 'sagi-z/vimspectorpy', { 'do': { -> vimspectorpy#update() } }
 
 " GitHub Copilot
 Plug 'github/copilot.vim'
+" Copilot keybindings
+let g:copilot_no_tab_map = v:true
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+imap <C-H> <Plug>(copilot-accept-word)
+imap <C-K> <Plug>(copilot-accept-line)
+
+" wordy: a plugin to improve the writing style
+" call :wordy <jargon> to search for words which are not recommended in the
+" document. Turn it off with :wordy off. Jump to the next / previous word with
+" :NextWordy and :PrevWordy.
+Plug 'preservim/vim-wordy'
+
 
 " These plugins can be useful but they are neither installed nor configured
 " currently
 "Plug 'preservim/vim-pencil'
 "Plug 'preservim/vim-lexical'
-"Plug 'preservim/vim-wordy'
-"
+
 call plug#end()
 
 " previously unused lighthaus theme, currently unused
