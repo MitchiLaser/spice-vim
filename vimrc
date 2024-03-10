@@ -135,7 +135,9 @@ let g:limelight_conceal_ctermfg = 240
 nmap <Leader>l :Limelight!!<CR>
 
 " nord-vim colour scheme
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
+" fork of nord-vim which has no problems in displaying visual selection
+Plug 'MitchiLaser/fork-nord-vim'
 
 " monokai color theme
 Plug 'crusoexia/vim-monokai'
@@ -437,6 +439,8 @@ call plug#end()
 " colorscheme lighthaus
 "silent! colorscheme monokai
 silent! colorscheme nord
+"set termguicolors
+set background=dark
 
 " execute python code (from visual selection)
 vnoremap <f5> :!python<CR>
