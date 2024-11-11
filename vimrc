@@ -199,6 +199,9 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
+" Vimtex has its own ToC, additional to the one from Tagbar
+nmap <leader>vt :VimtexTocToggle<CR>
+
 " live preview in evince (or other pdf viewer)
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 let g:livepreview_previewer = 'evince'
