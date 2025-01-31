@@ -79,6 +79,11 @@ set spelllang=de_de,en_gb,en_us
 " suggestion. After that the cursor will be put back to its previous position.
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
+" When marking text in a visual selection:
+" Press C-r to replace the text and then iterate over all occurrences
+" and pres y / n to replace / keep them
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " clear empty spaces at the end of lines on save of python files
 autocmd BufWritePre *.py :%s/\s\+$//e
 
