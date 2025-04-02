@@ -175,6 +175,15 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'dhruvasagar/vim-table-mode'
 autocmd VimEnter * silent! :TableModeEnable
 
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Do not start automatically
+let g:mkdp_auto_start = 0
+" key-bindings:
+nmap <Leader>mp :MarkdownPreview<CR>
+nmap <Leader>mps :MarkdownPreviewStop<CR>
+nmap <Leader>mpt :MarkdownPreviewToggle<CR>
+
 " status bar at the lower end of the vim window
 Plug 'vim-airline/vim-airline'
 set laststatus=2
